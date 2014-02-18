@@ -12,7 +12,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class AirplaneTest {
   private static FlyingFactory flyingFactory;
-  private Airplane classUnderTest;
   private static LiftOffFactory liftOffFactory;
 
   @BeforeClass
@@ -25,12 +24,12 @@ public class AirplaneTest {
   public void test1() {
 
     String expectedOutput = "Like a fighter jet";
-    String stringReturned = null;
+    String stringReturned;
 
     Flying fly = flyingFactory.createFlying("Fighter Jet");
     LiftOff liftOff = liftOffFactory.createLiftOff("Vertically");
 
-    classUnderTest = new Airplane(liftOff, fly);
+    Airplane classUnderTest = new Airplane(liftOff, fly);
 
     stringReturned = classUnderTest.howDoYouFly();
 
@@ -43,7 +42,7 @@ public class AirplaneTest {
   public void test2() {
 
     String expectedOutput = "I don't Fly";
-    String stringReturned = null;
+    String stringReturned;
 
     Flying fly = flyingFactory.createFlying("Model Airplane");
     LiftOff liftOff = liftOffFactory.createLiftOff("Horizontally");
@@ -60,7 +59,7 @@ public class AirplaneTest {
   public void test3() {
 
     String expectedOutput = "Like a passenger airplane";
-    String stringReturned = null;
+    String stringReturned;
 
     Flying fly = new IFlyLikePP();
     LiftOff liftOff = new ILiftOffV();
@@ -78,7 +77,7 @@ public class AirplaneTest {
   public void test4() {
 
     String expectedOutput = "Vertically";
-    String stringReturned = null;
+    String stringReturned;
 
     Flying fly = new IFlyLikeFJ();
     LiftOff liftOff = new ILiftOffV();
@@ -95,7 +94,7 @@ public class AirplaneTest {
   public void test5() {
 
     String expectedOutput = "I don't LiftOff";
-    String stringReturned = null;
+    String stringReturned;
 
     Flying fly = new IFlyLikeFJ();
     LiftOff liftOff = new IDontLiftOff();
@@ -112,7 +111,7 @@ public class AirplaneTest {
   public void test6() {
 
     String expectedOutput = "Horizontally";
-    String stringReturned = null;
+    String stringReturned;
 
     Flying fly = new IFlyLikeFJ();
     LiftOff liftOff = new ILiftOffH();
