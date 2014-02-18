@@ -1,5 +1,3 @@
-package vehicles;
-
 public class ILiftOffV implements LiftOff {
 
 	/* (non-Javadoc)

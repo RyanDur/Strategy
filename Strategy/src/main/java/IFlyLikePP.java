@@ -1,21 +1,19 @@
 /**
  * 
  */
-package vehicles;
-
 
 /**
  * @author oded
  *
  */
-public class IDontFly implements Flying {
+public class IFlyLikePP implements Flying {
 
 	/* (non-Javadoc)
 	 * @see vehicles.Flying#howIFly()
 	 */
 	@Override
 	public String howIFly() {
-		return "I don't Fly";
+		return "Like a passenger airplane";
 	}
 
 }

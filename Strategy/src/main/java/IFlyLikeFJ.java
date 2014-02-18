@@ -1,5 +1,3 @@
-package vehicles;
-
 public class IFlyLikeFJ implements Flying {
 
 	/* (non-Javadoc)

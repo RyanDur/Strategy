@@ -1,7 +1,6 @@
 /**
  * 
  */
-package vehicles;
 
 /**
  * @author oded

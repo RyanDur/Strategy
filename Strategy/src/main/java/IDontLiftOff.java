@@ -1,21 +1,19 @@
 /**
  * 
  */
-package vehicles;
 
 /**
  * @author oded
  *
  */
-public class ILiftOffH implements LiftOff {
+public class IDontLiftOff implements LiftOff {
 
 	/* (non-Javadoc)
 	 * @see vehicles.LiftOff#howILiftOff()
 	 */
 	@Override
 	public String howILiftOff() {
-		// TODO Auto-generated method stub
-		return "Horizontally";
+		return "I don't LiftOff";
 	}
 
 }
