@@ -3,10 +3,13 @@
  */
 public class FlyingFactory {
   public Flying createFlying(String s) {
-    return new IFlyLikeFJ();
-  }
+    Flying result = null;
 
-  public static FlyingFactory getInstance() {
-    return null;
+    if (s == "Fighter Jet") {
+      result = new IFlyLikeFJ();
+    } else if (s == "Model Airplane") {
+      result = new IDontFly();
+    }
+    return result;
   }
 }

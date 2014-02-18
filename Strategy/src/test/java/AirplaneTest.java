@@ -13,10 +13,12 @@ import static org.junit.Assert.assertEquals;
 public class AirplaneTest {
   private static FlyingFactory flyingFactory;
   private Airplane classUnderTest;
+  private static LiftOffFactory liftOffFactory;
 
   @BeforeClass
   public static void onlyOnce() {
     flyingFactory = new FlyingFactory();
+    liftOffFactory = new LiftOffFactory();
   }
 
   @Test
@@ -26,7 +28,7 @@ public class AirplaneTest {
     String stringReturned = null;
 
     Flying fly = flyingFactory.createFlying("Fighter Jet");
-    LiftOff liftOff = new ILiftOffV();
+    LiftOff liftOff = liftOffFactory.createLiftOff("Vertically");
 
     classUnderTest = new Airplane(liftOff, fly);
 
@@ -43,8 +45,8 @@ public class AirplaneTest {
     String expectedOutput = "I don't Fly";
     String stringReturned = null;
 
-    Flying fly = new IDontFly();
-    LiftOff liftOff = new ILiftOffV();
+    Flying fly = flyingFactory.createFlying("Model Airplane");
+    LiftOff liftOff = liftOffFactory.createLiftOff("Horizontally");
 
     Airplane classUnderTest = new Airplane(liftOff, fly);
 
