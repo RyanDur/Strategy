@@ -2,3 +2,8 @@
 *.iml
 *.ipr
 *.iws
+*/.DS_Store
+.DS_Store
+.DS_Store?
+__MACOSX
+.DS_Store
